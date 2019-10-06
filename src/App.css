@@ -2,4 +2,63 @@
   font-family: sans-serif;
   display: flex;
   justify-content: space-around;
+  background-color: rgb(0, 66, 128);
+  height: 10vh;
+  color: whitesmoke;
+  position: fixed;
+  width: 100%;
+}
+
+.Footer {
+  display: flex;
+  font-family: sans-serif;
+  height: 10vh;
+  background-color: rgb(0, 66, 128);
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+}
+.Header div {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.Header div a {
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: azure;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Card > div {
+  flex-basis: 25%;
+  border: 5px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.Card > div:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+
+* {
+  box-sizing: border-box;
 }

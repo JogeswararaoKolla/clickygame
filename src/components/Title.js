@@ -2,7 +2,7 @@ import React from "react";
 
 function Title() {
   return (
-    <div>
+    <div className="Title">
       <h2>Clicky Game!</h2>
       <strong>
         <p>

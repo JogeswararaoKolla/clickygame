@@ -1,13 +1,17 @@
 import React from "react";
+import "../App.css";
+import CardItem from "./CardItem.js";
 
 function Card(props) {
   return (
-    <div style={{ flexBasis: "20%" }}>
-      <img
-        style={{ height: "150px", width: "150px" }}
-        src={props.src}
-        onClick={() => props.ClickCount()}
-      />
+    <div className="Card">
+      {props.cards.map(element => (
+        <CardItem
+          key={element.id}
+          carditem={element}
+          carditemclick={props.ClickCount}
+        />
+      ))}
     </div>
   );
 }

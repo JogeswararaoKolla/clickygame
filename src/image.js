@@ -12,17 +12,17 @@ import image11 from "./images/11.jpg";
 import image12 from "./images/12.jpg";
 
 const images = [
-  { id: 1, img: image1 },
-  { id: 2, img: image2 },
-  { id: 3, img: image3 },
-  { id: 4, img: image4 },
-  { id: 5, img: image5 },
-  { id: 6, img: image6 },
-  { id: 7, img: image7 },
-  { id: 8, img: image8 },
-  { id: 9, img: image9 },
-  { id: 10, img: image10 },
-  { id: 11, img: image11 },
-  { id: 12, img: image12 }
+  { id: 1, img: image1, clicked: false },
+  { id: 2, img: image2, clicked: false },
+  { id: 3, img: image3, clicked: false },
+  { id: 4, img: image4, clicked: false },
+  { id: 5, img: image5, clicked: false },
+  { id: 6, img: image6, clicked: false },
+  { id: 7, img: image7, clicked: false },
+  { id: 8, img: image8, clicked: false },
+  { id: 9, img: image9, clicked: false },
+  { id: 10, img: image10, clicked: false },
+  { id: 11, img: image11, clicked: false },
+  { id: 12, img: image12, clicked: false }
 ];
 export default images;
