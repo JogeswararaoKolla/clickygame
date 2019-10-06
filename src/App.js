@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header.js";
 import Title from "./components/Title.js";
@@ -6,11 +6,15 @@ import Card from "./components/Card.js";
 import Footer from "./components/Footer.js";
 import images from "./image.js";
 
-const App = props => {
+const App = () => {
   const [imageref, setImageref] = useState(images);
   const [counter, setCounter] = useState(0);
   const [msg, setMsg] = useState({ message: "Click an image to begin!" });
   const [topscore, setTopscore] = useState(0);
+
+  useEffect(() => {
+    console.log("ComponentdidMount");
+  }, []);
 
   const gameController = id => {
     for (let i = 0; i < imageref.length; i++) {
@@ -18,23 +22,24 @@ const App = props => {
         if (imageref[i].clicked == false) {
           imageref[i].clicked = true;
           setCounter(counter + 1);
+          if (counter >= topscore) {
+            setTopscore(topscore + 1);
+          }
           setMsg({ message: "you guessed correctly!" });
           setImageref(shuffle(imageref));
           break;
         } else {
-          gameInitialization();
+          if (counter > topscore) {
+            setTopscore(counter);
+          }
+          setCounter(0);
+          setImageref(clickdefault(imageref));
+          setMsg({ message: "you guessed incorrectly!" });
+          console.log(images);
+          console.log(counter);
         }
       }
     }
-  };
-
-  const gameInitialization = () => {
-    setTopscore(counter);
-    setCounter(0);
-    setImageref(clickdefault(imageref));
-    setMsg({ message: "you guessed incorrectly!" });
-    console.log(images);
-    console.log(counter);
   };
 
   const clickdefault = arr => {

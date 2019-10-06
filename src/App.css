@@ -45,15 +45,25 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  width: 80%;
+  border: 10px solid green;
 }
 
 .Card > div {
   flex-basis: 25%;
-  border: 5px solid #f1f1f1;
+  /* border: 5px solid #b81010; */
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.Card div img {
+  height: 160px;
+  width: 200px;
+  border: 5px solid blue;
+}
 .Card > div:hover {
   transform: scale(1.05);
   transition: 0.1s;

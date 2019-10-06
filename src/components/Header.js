@@ -5,7 +5,7 @@ function Header(props) {
   return (
     <div className="Header">
       <div>
-        <a href="\">Clicky Game</a>
+        <a href="\">Clicky Toons</a>
       </div>
       <div>{props.message}</div>
       <div>
