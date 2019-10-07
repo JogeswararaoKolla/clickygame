@@ -12,9 +12,17 @@ const App = () => {
   const [msg, setMsg] = useState({ message: "Click an image to begin!" });
   const [topscore, setTopscore] = useState(0);
 
+  //If you’re familiar with React class lifecycle methods, you can think of
+  // useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+  //You can tell React to skip applying an effect if certain values haven’t changed between re-renders.
+  // To do so, pass an array as an optional second argument to useEffect:
+  // return function is clean up functions runs again before the next render.
   useEffect(() => {
-    console.log("ComponentdidMount");
-  }, []);
+    console.log("ComponentdidMount running", counter);
+    return () => {
+      console.log("running cleaning up!");
+    };
+  }, [counter]);
 
   const gameController = id => {
     for (let i = 0; i < imageref.length; i++) {

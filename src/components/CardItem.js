@@ -6,7 +6,7 @@ const CardItem = props => {
       <img
         src={props.carditem.img}
         id={props.carditem.id}
-        alt="image"
+        alt={props.carditem.name}
         onClick={event => {
           //console.log(event.target.id);
           event.preventDefault();
